@@ -1,6 +1,6 @@
 from Monitor import Monitor
 from docker.models.containers import Container
-from threading import Thread
+from multiprocessing import Process
 
 
 class NetworkMonitor(Monitor):
@@ -10,6 +10,7 @@ class NetworkMonitor(Monitor):
     def stop(self, container: Container):
         print("[*] Stopping Network Monitor")
 
-    def runInThread(self, container: Container):
-        thread = Thread(target=self.run(container))
-        thread.start()
+    def runInThread(self, container: Container) -> Process:
+        process = Process(target=self.run, args=(container,))
+        process.start()
+        return process

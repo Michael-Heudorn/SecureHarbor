@@ -1,3 +1,6 @@
+from multiprocessing import Process
+
+
 class Monitor():
     def run(self, container):
         pass
@@ -5,5 +8,5 @@ class Monitor():
     def stop(self, container):
         pass
 
-    def runInThread(self, container):
+    def runInThread(self, container) -> Process:
         pass

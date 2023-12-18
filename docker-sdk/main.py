@@ -48,7 +48,7 @@ def main():
     sandbox.runMonitors()
 
     # Stop Container
-    sandbox.terminate()
+    # sandbox.terminate()
 
 
 if __name__ == "__main__":
