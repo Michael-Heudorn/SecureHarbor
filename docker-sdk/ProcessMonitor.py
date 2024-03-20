@@ -6,7 +6,7 @@ from multiprocessing import Process
 class ProcessMonitor(Monitor):
     def run(self, container: Container):
         print("[*] Starting Process Monitor")
-        print(container.top())
+        #print(container.top())
 
     def stop(self, container: Container):
         print("[*] Stopping Process Monitor")
